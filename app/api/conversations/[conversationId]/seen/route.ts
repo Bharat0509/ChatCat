@@ -55,7 +55,7 @@ export async function POST(request: Request, { params }: { params: IParams }) {
                 },
             },
         });
-        await pusherServer.trigger(currentUser.email, "conversation:update", {
+        await pusherServer.trigger(currentUser.email!, "conversation:update", {
             id: conversationId,
             messages: [updatedMessage],
         });
