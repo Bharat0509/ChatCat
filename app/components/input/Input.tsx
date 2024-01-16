@@ -30,7 +30,8 @@ const Input: React.FC<InputProps> = ({
             text-sm
             fond-medium
             leading-6
-            text-gray-900
+            text-primary-800
+            font-semibold
             '
             >
                 {label}
@@ -54,11 +55,11 @@ const Input: React.FC<InputProps> = ({
                         shadow-sm
                         ring-1  
                         ring-inset
-                        ring-gray-300 
+                        ring-primary-400 
                         placeholder:text-gray-400
                         focus:ring-2 
                         focus:ring-inset
-                        focus:ring-sky-600
+                        focus:ring-primary-700
                         sm:text-sm
                         sm:leading-6
                         `,

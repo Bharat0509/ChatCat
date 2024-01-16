@@ -71,7 +71,7 @@ const AuthForm = () => {
         signIn(action, { redirect: false })
             .then((callback) => {
                 if (callback?.error) {
-                    toast.error("Invalid Credientials");
+                    toast.error("Invalid Credentials");
                 }
                 if (callback?.ok && !callback.error) {
                     toast.success("Logged in!");
@@ -91,11 +91,12 @@ const AuthForm = () => {
         >
             <div
                 className='
+                mx-4
             bg-white
             px-4
             py-8
             shadow
-            sm:rounded-lg
+            rounded-lg
             sm:px-10'
             >
                 <form className='space-y-6 ' onSubmit={handleSubmit(onSubmit)}>
@@ -157,7 +158,7 @@ const AuthForm = () => {
                             </span>
                         </div>
                     </div>
-                    <div className='mt-6 flex gap-6'>
+                    <div className='mt-6 flex gap-6 items-center justify-center'>
                         <AuthSocialButton
                             icon={BsGithub}
                             onClick={() => socialAction("github")}
@@ -171,12 +172,12 @@ const AuthForm = () => {
                 <div className='flex gap-2 justify-center text-sm mt-6 px-2 text-gray-500'>
                     <div>
                         {variant === "LOGIN"
-                            ? "New to Messenger?"
+                            ? "New to ChatCat?"
                             : "Already have an account?"}
                     </div>
                     <div
                         onClick={toggleVariant}
-                        className='underline cursor-pointer'
+                        className='underline text-primary-800 cursor-pointer'
                     >
                         {variant === "LOGIN" ? "Create an Account" : "Log in"}
                     </div>

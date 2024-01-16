@@ -13,19 +13,17 @@ const DeskTopSidebar: React.FC<DeskTopSidebarProps> = ({ currentUser }) => {
     const routes = useRoutes();
     const [isOpen, setIsOpen] = useState(false);
     const [SettingOpen, setSettingOpen] = useState(false);
-    // console.log({ currentUser });
 
     return (
         <>
             <SettingModal
                 currentUser={currentUser}
-                isOpen={isOpen}
+                isOpen={SettingOpen}
                 onClose={() => setSettingOpen(false)}
             />
 
             <div
-                className='hidden lg:fixed lg:inset-y-0 lg:left-0
-    lg:z-40
+                className='hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40
     lg:w-20
     xl:px-6
     lg:overflow-y-auto
@@ -58,8 +56,8 @@ const DeskTopSidebar: React.FC<DeskTopSidebarProps> = ({ currentUser }) => {
             flex flex-col justify-between items-center'
                 >
                     <div
-                        onClick={() => setIsOpen(true)}
-                        className='cursor-pointer hover:opacity-75 transition'
+                        onClick={() => setSettingOpen(true)}
+                        className='cursor-pointer hover:opacity-75 transition '
                     >
                         <Avatar user={currentUser} />
                     </div>

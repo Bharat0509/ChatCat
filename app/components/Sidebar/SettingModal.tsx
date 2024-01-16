@@ -62,7 +62,7 @@ const SettingModal: React.FC<SettingModalProps> = ({
                         <h2 className='text-base font-semibold leading-7 text-gray-900'>
                             Profile
                         </h2>
-                        <p className='mt1 text-sm leading-6 text-gray-600'>
+                        <p className='mt1 text-sm leading-6 text-primary-600'>
                             Edit your public Information
                         </p>
                         <div className='mt-10 flex flex-col gap-y-8'>
@@ -75,15 +75,15 @@ const SettingModal: React.FC<SettingModalProps> = ({
                                 register={register}
                             />
                         </div>
-                        <div>
-                            <label className='block text-sm font-medium leading-6 text-gray-900'>
+                        <div className='mt-10'>
+                            <label className='block text-sm font-medium leading-6 text-primary-900'>
                                 Photo
                             </label>
                             <div className='mt-2 flex items-center gap-x-3'>
                                 <Image
                                     width={48}
                                     height={48}
-                                    className='h-5 w-5 rounded-full bg-cover'
+                                    className='rounded-full bg-cover'
                                     src={
                                         image ||
                                         currentUser.image ||

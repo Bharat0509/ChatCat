@@ -19,9 +19,11 @@ const UserList: React.FC<UserListProps> = ({ items }) => {
                         People
                     </div>
                 </div>
-                {items.map((item) => (
-                    <UserBox key={item.id} data={item} />
-                ))}
+                <div className='h-screen overflow-y-auto'>
+                    {items.map((item) => (
+                        <UserBox key={item.id} data={item} />
+                    ))}
+                </div>
             </div>
         </aside>
     );

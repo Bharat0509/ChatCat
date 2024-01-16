@@ -22,12 +22,13 @@ const MobileItem: React.FC<MobileItemProps> = ({
         <Link
             href={href}
             onClick={onClick}
+            title={href.replace("/", "")}
             className={clsx(
-                `group flex gap-x-3 text-sm leading-6 font-semibold w-full justify-center p-4 text-gray-500 hover:text-black hover:bg-gray-100`,
-                active && `bg-gray-100 text-black`
+                `group flex gap-x-3 text-sm leading-6 font-semibold w-full justify-center p-4 border-t border-primary-200 hover:text-black hover:bg-primary-200`,
+                active && `bg-primary-300 text-black`
             )}
         >
-            <Icon className='h-6 w-6 shrink-0' />
+            <Icon className='h-6 w-6 shrink-0 text-primary-900' />
         </Link>
     );
 };

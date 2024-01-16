@@ -31,6 +31,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
         const messages = data.messages || [];
         return messages[messages.length - 1];
     }, [data.messages]);
+
     const userEmail = useMemo(() => {
         return session.data?.user?.email;
     }, [session?.data?.user?.email]);
@@ -59,8 +60,8 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
         <div
             onClick={handleClick}
             className={clsx(
-                `w-full relative flex items-center space-x-3 hover:brightness-100 rounded-lg transition cursor-pointer p-3`,
-                selected ? "bg-neutral-100" : "bg-white"
+                `w-full relative flex items-center space-x-3 hover:bg-primary-200 rounded-lg transition cursor-pointer p-3`,
+                selected ? "bg-primary-200" : "bg-white"
             )}
         >
             {data.isGroup ? (

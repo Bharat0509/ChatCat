@@ -9,18 +9,18 @@ export default function Home() {
             min-h-full
             flex-col
             justify-center
-            py-12
+            py-8
             sm:px-6
             lg:px-8
-            bg-gray-100'
+            bg-black/10'
         >
             <div className='sm:mx-auto sm:w-full sm:max-w-md'>
                 <Image
                     alt='Logo'
-                    height={48}
-                    width={48}
+                    height={60}
+                    width={60}
                     className='mx-auto w-auto'
-                    src={"/logo.png"}
+                    src={"/chatCat.png"}
                 />
                 <h2
                     className='
@@ -34,7 +34,7 @@ export default function Home() {
                     Sign in to Your Account
                 </h2>
             </div>
-            {/* AuthForm here */}
+
             <AuthForm />
         </div>
     );

@@ -40,12 +40,12 @@ const Form = () => {
                 onUpload={handleUpload}
                 uploadPreset='vr6horgq'
             >
-                <HiPhoto size={30} className='text-sky-500' />
+                <HiPhoto size={30} className='text-primary-900' />
             </CldUploadButton>
 
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className='flex items-center gap-2 lg:gap-4 w-full'
+                className='flex items-center gap-2 lg:gap-4 w-[90%]'
             >
                 <MessageInput
                     id='message'
@@ -56,7 +56,7 @@ const Form = () => {
                 />
                 <button
                     type='submit'
-                    className='rounded-full p-2 bg-sky-500 cursor-pointer hover:bg-sky-600 transition'
+                    className='rounded-full p-2 bg-primary-800 cursor-pointer hover:bg-primary-600 transition'
                 >
                     <HiOutlinePaperAirplane size={18} className='text-white' />
                 </button>
